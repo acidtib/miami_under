@@ -3,6 +3,7 @@ var express = require('express')
   , cors = require('cors')
   , fugu = express();
 var bodyParser = require('body-parser');
+fugu.set('port', (process.env.PORT || 5000))
 fugu.use(cors());
 fugu.use(bodyParser.urlencoded({ extended: true }));
 fugu.use(bodyParser.json());
@@ -47,4 +48,6 @@ fugu_api_router.post('/under', function (req, res) {
 
 fugu.use('/api', fugu_api_router);
 
-fugu.listen(5656);
+fugu.listen(fugu.get('port'), function() {
+  console.log("Node app is running at localhost:" + fugu.get('port'))
+})
