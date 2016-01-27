@@ -24,6 +24,10 @@ fugu_api_router.post('/under', function (req, res) {
       var elevation = parseInt(response.body.results[0].elevation);
       var under = 10 - elevation;
 
+      if (elevation > 10) {
+        under = 'safe';
+      }
+
       // create database entry
 
       // create image from base64
