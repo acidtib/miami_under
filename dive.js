@@ -1,5 +1,4 @@
 var needle = require('needle');
-var gd = require('easy-gd');
 var express = require('express')
   , cors = require('cors')
   , fugu = express();
