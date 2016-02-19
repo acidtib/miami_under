@@ -4,7 +4,7 @@
   "description": "are you under water in miami",
   "main": "dive.js",
   "scripts": {
-    "start": "node dive.js",
+    "start": "nodemon dive.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "arubinofaux",
@@ -12,7 +12,12 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
+    "easy-gd": "y-a-v-a/easy-gd",
     "express": "^4.13.3",
-    "needle": "^0.11.0"
+    "moment": "^2.11.2",
+    "mysql": "^2.10.2",
+    "needle": "^0.11.0",
+    "random-string": "^0.1.2",
+    "replace": "^0.3.0"
   }
 }
